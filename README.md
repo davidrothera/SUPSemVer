@@ -1,3 +1,17 @@
+![Platform iOS 8+](https://img.shields.io/badge/Platform-iOS%208%2B-blue.svg)
+![Platform Mac OS X 10.9+](https://img.shields.io/badge/Platform-Mac%20OS%20X%2010.9%2B-blue.svg)
+![Platform](https://img.shields.io/badge/Platform-tvOS%209%2B-blue.svg)
+![Platform](https://img.shields.io/badge/Platform-watchOS%202%2B-blue.svg)
+<br/>
+[![Language Swift 2](https://img.shields.io/badge/Language-Swift%202-orange.svg)](https://developer.apple.com/swift)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg)](https://github.com/Carthage/Carthage)
+[![Build Status](https://travis-ci.org/davidrothera/SUPSemVer.svg?branch=master)](https://travis-ci.org/davidrothera/SUPSemVer)
+[![codecov.io](https://codecov.io/github/davidrothera/SUPSemVer/coverage.svg?branch=master)](https://codecov.io/github/davidrothera/SUPSemVer?branch=master)
+[![Version](https://img.shields.io/cocoapods/v/SUPSemVer.svg?style=flat)](http://cocoapods.org/pods/SUPSemVer)
+[![License](https://img.shields.io/cocoapods/l/SUPSemVer.svg?style=flat)](http://cocoapods.org/pods/SUPSemVer)
+[![Platform](https://img.shields.io/cocoapods/p/SUPSemVer.svg?style=flat)](http://cocoapods.org/pods/SUPSemVer)
+
+
 # SUPSemVer
 
 Easy to use framework for comparing semantic versions.
