@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>SUPSemVer (OSX).xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>SUPSemVer (iOS).xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>SUPSemVer (tvOS).xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>SUPSemVer (watchOS).xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>ACDE8B871C2ED4F600FEA9A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ACDE8B911C2ED4F600FEA9A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ACDE8BA21C2ED56100FEA9A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ACDE8BAD1C2ED56200FEA9A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ACDE8BBC1C2EE70C00FEA9A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ACDE8BC81C2EE70F00FEA9A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ACDE8C561C2F03A900FEA9A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ACDE8C631C2F041600FEA9A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ACDE8C701C2F045200FEA9A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
