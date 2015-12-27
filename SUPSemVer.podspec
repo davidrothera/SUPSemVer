@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SUPSemVer"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Easy-to-use Semantic Version comparison framework"
   s.description  = <<-DESC
                    # SUPSemVer

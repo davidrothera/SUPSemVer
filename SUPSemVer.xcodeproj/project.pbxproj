@@ -7,13 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ACDE8B8C1C2ED4F600FEA9A3 /* SUPSemVer.h in Headers */ = {isa = PBXBuildFile; fileRef = ACDE8B8B1C2ED4F600FEA9A3 /* SUPSemVer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACDE8B931C2ED4F600FEA9A3 /* SUPSemVer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDE8B881C2ED4F600FEA9A3 /* SUPSemVer.framework */; };
 		ACDE8B981C2ED4F600FEA9A3 /* SUPSemVerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE8B971C2ED4F600FEA9A3 /* SUPSemVerTests.swift */; };
 		ACDE8BB91C2ED5E000FEA9A3 /* SUPSemVer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE8BB81C2ED5E000FEA9A3 /* SUPSemVer.swift */; };
-		ACDE8C791C2F049400FEA9A3 /* SUPSemVer.h in Headers */ = {isa = PBXBuildFile; fileRef = ACDE8B8B1C2ED4F600FEA9A3 /* SUPSemVer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACDE8C7A1C2F049500FEA9A3 /* SUPSemVer.h in Headers */ = {isa = PBXBuildFile; fileRef = ACDE8B8B1C2ED4F600FEA9A3 /* SUPSemVer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACDE8C7B1C2F049600FEA9A3 /* SUPSemVer.h in Headers */ = {isa = PBXBuildFile; fileRef = ACDE8B8B1C2ED4F600FEA9A3 /* SUPSemVer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACDE8C7C1C2F049A00FEA9A3 /* SUPSemVer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE8BB81C2ED5E000FEA9A3 /* SUPSemVer.swift */; };
 		ACDE8C7D1C2F049B00FEA9A3 /* SUPSemVer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE8BB81C2ED5E000FEA9A3 /* SUPSemVer.swift */; };
 		ACDE8C7E1C2F049C00FEA9A3 /* SUPSemVer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE8BB81C2ED5E000FEA9A3 /* SUPSemVer.swift */; };
@@ -31,7 +27,6 @@
 
 /* Begin PBXFileReference section */
 		ACDE8B881C2ED4F600FEA9A3 /* SUPSemVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SUPSemVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACDE8B8B1C2ED4F600FEA9A3 /* SUPSemVer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUPSemVer.h; sourceTree = "<group>"; };
 		ACDE8B8D1C2ED4F600FEA9A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACDE8B921C2ED4F600FEA9A3 /* SUPSemVerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SUPSemVerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDE8B971C2ED4F600FEA9A3 /* SUPSemVerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPSemVerTests.swift; sourceTree = "<group>"; };
@@ -106,7 +101,6 @@
 		ACDE8B8A1C2ED4F600FEA9A3 /* SUPSemVer */ = {
 			isa = PBXGroup;
 			children = (
-				ACDE8B8B1C2ED4F600FEA9A3 /* SUPSemVer.h */,
 				ACDE8B8D1C2ED4F600FEA9A3 /* Info.plist */,
 				ACDE8BB81C2ED5E000FEA9A3 /* SUPSemVer.swift */,
 			);
@@ -129,7 +123,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACDE8B8C1C2ED4F600FEA9A3 /* SUPSemVer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +130,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACDE8C791C2F049400FEA9A3 /* SUPSemVer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +137,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACDE8C7A1C2F049500FEA9A3 /* SUPSemVer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +144,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACDE8C7B1C2F049600FEA9A3 /* SUPSemVer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,6 +679,7 @@
 				ACDE8C5E1C2F03A900FEA9A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACDE8C691C2F041600FEA9A3 /* Build configuration list for PBXNativeTarget "SUPSemVer (tvOS)" */ = {
 			isa = XCConfigurationList;
@@ -697,6 +688,7 @@
 				ACDE8C6B1C2F041600FEA9A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACDE8C761C2F045200FEA9A3 /* Build configuration list for PBXNativeTarget "SUPSemVer (OSX)" */ = {
 			isa = XCConfigurationList;
@@ -705,6 +697,7 @@
 				ACDE8C781C2F045200FEA9A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
