@@ -8,21 +8,21 @@
 
 import Foundation
 
-class SemVer : CustomStringConvertible, Comparable {
+public class SemVer : CustomStringConvertible, Comparable {
     var major : Int
     var minor : Int
     var patch : Int
 
     var prerelease : String?
 
-    var description : String {
+    public var description : String {
         if prerelease == nil {
             return "SemVer(Major: \(major), Minor: \(minor), Patch: \(patch))"
         }
         return "SemVer(Major: \(major), Minor: \(minor), Patch: \(patch), Prerelease: \(prerelease!))"
     }
 
-    init?(_ semVer: String) {
+    public init?(_ semVer: String) {
         let versionComponents = semVer.componentsSeparatedByString("-")
         let versions = versionComponents[0].componentsSeparatedByString(".")
 
@@ -48,13 +48,13 @@ class SemVer : CustomStringConvertible, Comparable {
         self.patch = patch
     }
 
-    init(major: Int, minor: Int, patch: Int) {
+    public init(major: Int, minor: Int, patch: Int) {
         self.major = major
         self.minor = minor
         self.patch = patch
     }
 
-    init(major: Int, minor: Int, patch: Int, prerelease: String) {
+    public init(major: Int, minor: Int, patch: Int, prerelease: String) {
         self.major = major
         self.minor = minor
         self.patch = patch
@@ -62,14 +62,14 @@ class SemVer : CustomStringConvertible, Comparable {
     }
 }
 
-func ==(lhs: SemVer, rhs: SemVer) -> Bool {
+public func ==(lhs: SemVer, rhs: SemVer) -> Bool {
     if lhs.major == rhs.major && lhs.minor == rhs.minor && lhs.patch == rhs.patch && lhs.prerelease == rhs.prerelease {
         return true
     }
     return false
 }
 
-func <(lhs: SemVer, rhs: SemVer) -> Bool {
+public func <(lhs: SemVer, rhs: SemVer) -> Bool {
     if lhs.major < rhs.major {
         return true
     } else if lhs.major <= rhs.major && lhs.minor < rhs.minor {
