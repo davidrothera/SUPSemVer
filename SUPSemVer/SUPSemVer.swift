@@ -8,14 +8,14 @@
 
 import Foundation
 
-public class SemVer : CustomStringConvertible, Comparable {
-    var major : Int
-    var minor : Int
-    var patch : Int
+public class SemVer: CustomStringConvertible, Comparable {
+    var major: Int
+    var minor: Int
+    var patch: Int
 
-    var prerelease : String?
+    var prerelease: String?
 
-    public var description : String {
+    public var description: String {
         if prerelease == nil {
             return "SemVer(Major: \(major), Minor: \(minor), Patch: \(patch))"
         }
