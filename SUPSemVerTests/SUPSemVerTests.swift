@@ -10,7 +10,7 @@ import XCTest
 @testable import SUPSemVer
 
 class SUPSemVerTests: XCTestCase {
-    
+
     func testStringInit() {
         let test = SemVer("1.2.3")
         XCTAssertNotNil(test, "Created SemVer object should not be nil")
@@ -82,5 +82,5 @@ class SUPSemVerTests: XCTestCase {
         let test2 = SemVer(major: 1, minor: 0, patch: 1)
         XCTAssertNotEqual(test1, test2)
     }
-    
+
 }
