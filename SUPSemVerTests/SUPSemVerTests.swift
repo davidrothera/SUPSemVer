@@ -31,16 +31,6 @@ class SUPSemVerTests: XCTestCase {
         XCTAssertNotNil(test)
     }
 
-    func testFail() {
-        let test = SemVer("1.0")
-        XCTAssertNil(test, "Failed SemVer should be nil")
-    }
-
-    func testStringFail() {
-        let test = SemVer("a.b.c")
-        XCTAssertNil(test)
-    }
-
     func testMajorComparison() {
         let test1 = SemVer("1.0.0")!
         let test2 = SemVer("2.0.0")!
@@ -81,6 +71,32 @@ class SUPSemVerTests: XCTestCase {
         let test1 = SemVer(major: 1, minor: 0, patch: 0)
         let test2 = SemVer(major: 1, minor: 0, patch: 1)
         XCTAssertNotEqual(test1, test2)
+    }
+
+    func testGreaterMinorVersion() {
+        let test1 = SemVer(major: 1, minor: 0, patch: 15)
+        let test2 = SemVer(major: 1, minor: 1, patch: 0)
+        XCTAssertGreaterThan(test2, test1)
+
+        let test3 = SemVer("1.0.15")!
+        let test4 = SemVer("1.1")!
+        XCTAssertGreaterThan(test4, test3)
+    }
+
+    func testMissingComponents() {
+        let test1 = SemVer(major: 1, minor: 0, patch: 0)
+        let test2 = SemVer("1")
+        XCTAssertEqual(test1, test2)
+
+        let test3 = SemVer(major: 1, minor: 1, patch: 0)
+        let test4 = SemVer("1.1")
+        XCTAssertEqual(test3, test4)
+    }
+
+    func testBlankVersion() {
+        let test1 = SemVer("hi.ho.silver")
+        let test2 = SemVer(major: 0, minor: 0, patch: 0)
+        XCTAssertEqual(test1, test2)
     }
 
 }

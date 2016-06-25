@@ -8,6 +8,13 @@
 
 import Foundation
 
+extension CollectionType {
+    /// Returns the element at the specified index iff it is within bounds, otherwise nil.
+    subscript (safe index: Index) -> Generator.Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
+}
+
 public class SemVer: CustomStringConvertible, Comparable {
     var major: Int
     var minor: Int
@@ -19,7 +26,8 @@ public class SemVer: CustomStringConvertible, Comparable {
         if prerelease == nil {
             return "SemVer(Major: \(major), Minor: \(minor), Patch: \(patch))"
         }
-        return "SemVer(Major: \(major), Minor: \(minor), Patch: \(patch), Prerelease: \(prerelease!))"
+        return "SemVer(Major: \(major), Minor: \(minor), Patch: \(patch), " +
+            "Prerelease: \(prerelease!))"
     }
 
     public init?(_ semVer: String) {
@@ -28,24 +36,26 @@ public class SemVer: CustomStringConvertible, Comparable {
 
         prerelease = versionComponents.count > 1 ? versionComponents[1] : nil
 
-        if versions.count < 3 {
-            // TODO: Get rid of these after Swift2.2
-            major = 0
-            minor = 0
-            patch = 0
-            return nil
-        }
-
-        guard let major = Int(versions[0]), minor = Int(versions[1]), patch = Int(versions[2]) else {
+        // The first element of the array always exists, try and convert to an Int
+        if let majorComponent = Int(versions[0]) {
+            self.major = majorComponent
+        } else {
             self.major = 0
-            self.minor = 0
-            self.patch = 0
-            return nil
         }
 
-        self.major = major
-        self.minor = minor
-        self.patch = patch
+        // The second element might not exist, use the safe extension
+        if let minorComponent = versions[safe: 1] {
+            self.minor = Int(minorComponent) ?? 0
+        } else {
+            self.minor = 0
+        }
+
+        // The third element might not exist, use the safe extension
+        if let patchComponent = versions[safe: 2] {
+            self.patch = Int(patchComponent) ?? 0
+        } else {
+            self.patch = 0
+        }
     }
 
     public init(major: Int, minor: Int, patch: Int) {
@@ -62,14 +72,17 @@ public class SemVer: CustomStringConvertible, Comparable {
     }
 }
 
-public func ==(lhs: SemVer, rhs: SemVer) -> Bool {
-    if lhs.major == rhs.major && lhs.minor == rhs.minor && lhs.patch == rhs.patch && lhs.prerelease == rhs.prerelease {
+public func == (lhs: SemVer, rhs: SemVer) -> Bool {
+    if lhs.major == rhs.major &&
+       lhs.minor == rhs.minor &&
+       lhs.patch == rhs.patch &&
+       lhs.prerelease == rhs.prerelease {
         return true
     }
     return false
 }
 
-public func <(lhs: SemVer, rhs: SemVer) -> Bool {
+public func < (lhs: SemVer, rhs: SemVer) -> Bool {
     if lhs.major < rhs.major {
         return true
     } else if lhs.major <= rhs.major && lhs.minor < rhs.minor {
