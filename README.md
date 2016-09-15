@@ -49,6 +49,8 @@ test1 == test5  # true
 
 ## Installation
 
+SUPSemVer version 1.0.4 required Swift3 which is not backwards compatible with Swift2, if you require Swift2 support please use version 1.0.3
+
 ### CocoaPods
 
 ```
