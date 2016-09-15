@@ -8,21 +8,21 @@
 
 import Foundation
 
-extension CollectionType {
-    /// Returns the element at the specified index iff it is within bounds, otherwise nil.
-    subscript (safe index: Index) -> Generator.Element? {
-        return indices.contains(index) ? self[index] : nil
+extension Collection {
+    // A safe way to return an index if it exists and a nil if not
+    public subscript(safe index: Index) -> _Element? {
+        return index >= startIndex && index < endIndex ? self[index] : nil
     }
 }
 
-public class SemVer: CustomStringConvertible, Comparable {
+open class SemVer: CustomStringConvertible, Comparable {
     var major: Int
     var minor: Int
     var patch: Int
 
     var prerelease: String?
 
-    public var description: String {
+    open var description: String {
         if prerelease == nil {
             return "SemVer(Major: \(major), Minor: \(minor), Patch: \(patch))"
         }
@@ -31,8 +31,8 @@ public class SemVer: CustomStringConvertible, Comparable {
     }
 
     public init?(_ semVer: String) {
-        let versionComponents = semVer.componentsSeparatedByString("-")
-        let versions = versionComponents[0].componentsSeparatedByString(".")
+        let versionComponents = semVer.components(separatedBy: "-")
+        let versions = versionComponents[0].components(separatedBy: ".")
 
         prerelease = versionComponents.count > 1 ? versionComponents[1] : nil
 

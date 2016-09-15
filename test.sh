@@ -1,6 +1,6 @@
 #! /bin/bash
 
-TEST_CMD="xcodebuild -scheme 'SUPSemVer (iOS)' -project SUPSemVer.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.2' build test"
+TEST_CMD="xcodebuild -scheme 'SUPSemVer (iOS)' -project SUPSemVer.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.0' build test"
 
 which -s xcpretty
 XCPRETTY_INSTALLED=$?
